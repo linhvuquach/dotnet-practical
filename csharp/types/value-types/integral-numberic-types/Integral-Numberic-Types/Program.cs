@@ -1,4 +1,4 @@
-﻿// Characteristics of the integral types
+﻿/*** Characteristics of the integral types ***/
 
 sbyte a = 5;
 byte b = 5;
@@ -21,3 +21,16 @@ Console.WriteLine(g);
 Console.WriteLine(h);
 Console.WriteLine(i);
 Console.WriteLine(j);
+
+/*** Integer literals ***/
+
+Console.WriteLine("Integer literals");
+var decimalLiteral = 5;
+var binaryLiteral = 0b_0101;
+var hexLiteral = 0x5A;
+
+var monday_to_thurday = 0b_1111000;
+
+Console.WriteLine(decimalLiteral);
+Console.WriteLine(binaryLiteral);
+Console.WriteLine(hexLiteral);
