@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{25693CD7-1973-4646-92A9-8C0F3A65FE00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "operators-and-expressions", "operators-and-expressions", "{F3F5B9CD-4E57-480F-BB85-335FE58C48D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bitwise", "Bitwise", "{BDC44826-A5D0-4069-83C0-240B44DD9F1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitwise", "csharp\operators-and-expressions\Bitwise\Bitwise\Bitwise.csproj", "{E96312BD-E1C0-4B99-B261-6FA36810E514}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E96312BD-E1C0-4B99-B261-6FA36810E514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96312BD-E1C0-4B99-B261-6FA36810E514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96312BD-E1C0-4B99-B261-6FA36810E514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96312BD-E1C0-4B99-B261-6FA36810E514}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3F5B9CD-4E57-480F-BB85-335FE58C48D7} = {25693CD7-1973-4646-92A9-8C0F3A65FE00}
+		{BDC44826-A5D0-4069-83C0-240B44DD9F1E} = {F3F5B9CD-4E57-480F-BB85-335FE58C48D7}
+		{E96312BD-E1C0-4B99-B261-6FA36810E514} = {BDC44826-A5D0-4069-83C0-240B44DD9F1E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C119F02B-B549-44E8-8704-3A2A610B88B7}
+	EndGlobalSection
+EndGlobal
