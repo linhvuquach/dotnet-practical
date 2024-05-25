@@ -34,3 +34,9 @@ var monday_to_thurday = 0b_1111000;
 Console.WriteLine(decimalLiteral);
 Console.WriteLine(binaryLiteral);
 Console.WriteLine(hexLiteral);
+
+/*** Native sized integers***/
+Console.WriteLine("Native sized integers");
+Console.WriteLine($"size of nint = {sizeof(int)}");
+Console.WriteLine($"int.minValue = {int.MinValue}");
+Console.WriteLine($"int.maxValue = {int.MaxValue}");
