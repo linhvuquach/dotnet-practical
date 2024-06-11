@@ -29,8 +29,13 @@ On the C# side of things, the compiler transforms your code into a state machine
 
 ![image](https://github.com/linhvuquach/dotnet-practical/assets/26388126/1ef3d801-551b-4883-adac-fe4416cbf019)
 
+## Exception handling
+
+- We'll cover how to handle exceptions in async methods using `try-catch` blocks.
+
 ## References
 
+- https://code-maze.com/asynchronous-programming-with-async-and-await-in-asp-net-core/
 - https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios
 - https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model#BKMK_WhatHappensUnderstandinganAsyncMethod
 - Use case: https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/
