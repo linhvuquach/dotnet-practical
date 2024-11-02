@@ -1,4 +1,7 @@
-using RealTimeApp.hubs;
+
+using Microsoft.AspNetCore.Mvc;
+using server.hubs;
+using server.services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,8 +9,25 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSignalR();
+builder.Services.AddSingleton<NotificationService>();
+
+var ReactPolicy = "AllowReactApp";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(ReactPolicy, builder =>
+    {
+        builder
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials();
+    });
+});
 
 var app = builder.Build();
+const string MyHubConn = "/mychathub";
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -17,6 +37,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(ReactPolicy);
+
+app.MapHub<NotificationHub>(MyHubConn);
 
 var summaries = new[]
 {
@@ -37,6 +60,13 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+// Endpoint to trigger a notification
+app.MapPost("/send-notification", async ([FromBody] string message, NotificationService notificationService) =>
+{
+    await notificationService.SendMessage(message);
+    return Results.Ok("Notification sent");
+});
 
 app.Run();
 
